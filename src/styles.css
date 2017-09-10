@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    margin:0;
+    padding:0;
+}
+h1 {
+    margin:4px;
+    margin-bottom: 10px;
+    border-bottom:1px solid green;
+    color:green;
+}
+
+p {
+    margin: 4px;
+    padding:4px;
+    background: lightgray;
+}
+
+.footer {
+    border-top: 2px solid grey;
+    margin-top: 100px;
+    padding: 20px;
+    background: lightblue;
+}
+
+.footer ul li,.header ul li{
+    display: inline-block;
+}
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+    
+}
+.clear {
+    clear: both;
+}
+
