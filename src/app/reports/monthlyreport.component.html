@@ -1,0 +1,10 @@
+<div>
+  this is monthly report {{currentYear}}
+  <button [disabled]="disableYearBtn" (click)="changeYear()">Change year</button>
+  <button (click)="toogle()">Toogle</button>
+  <ul>
+    <li *ngFor="let year of years;let odd=odd;let i=index">
+      <div *ngIf="odd">{{year}} and index is {{i}}</div>
+    </li>
+  </ul>
+</div>

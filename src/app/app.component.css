@@ -1,0 +1,53 @@
+.container {
+  /* border: 2px solid red; */
+}
+
+.blue {
+  background-color: blue;
+  color: white;
+}
+
+.green {
+  background-color: green;
+  color: white;
+}
+
+.font3em {
+  font-size: 3em;
+}
+
+.font5em {
+  font-size: 5em;
+}
+
+.error {
+  border: 2px solid red;
+}
+
+.success {
+  border: 2px solid lime;
+}
+
+.warning {
+  padding: 3px;
+  margin: 5px;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+}
+
+.info {
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  padding: 3px;
+  margin: 5px;
+}
+
+.successb {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  padding: 3px;
+  margin: 5px;
+}
