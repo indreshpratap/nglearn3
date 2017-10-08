@@ -1,0 +1,12 @@
+<div *ngFor="let p of products">
+    <app-product [product]="p" msg="Hi" (onCartClick)="addToCart($event)" isproductlist="true"></app-product>
+    <hr>
+</div>
+
+<h3>My Cart</h3>
+<p>Total {{cart.length}} items</p>
+
+<div *ngFor="let c of cart">
+    <app-product [product]="c" msg="Cart Item" isproductlist="true"></app-product>
+    <hr>
+</div>

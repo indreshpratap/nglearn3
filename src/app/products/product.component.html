@@ -1,0 +1,28 @@
+<table>
+    <tbody>
+        <tr>
+            <th>Name</th>
+            <td>{{product.name}}</td>
+        </tr>
+        <tr>
+            <th>Category</th>
+            <td>{{product.category}}</td>
+        </tr>
+        <tr>
+            <th>Color</th>
+            <td>{{product.color}}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{product.price}}</td>
+        </tr>
+        <tr>
+            <th>Message</th>
+            <td>{{msg}}</td>
+        </tr>
+         <tr *ngIf="isproductlist">
+            <th><button (click)="onCartBtnClick()">Add to Cart</button></th>
+            <td>&nbsp;</td>
+        </tr>
+    </tbody>
+</table>

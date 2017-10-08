@@ -1,36 +1,47 @@
-<p>
-  <b> {{ description }} </b></p>
-<!-- <div [id]="containerId"  class="container" [ngClass]="clsArr" [class.success]="flag" [class.error]="!flag"> -->
-<div [id]="containerId" class="container" [ngClass]="clsObj">
-  {{ containerId }}
+<app-product-list></app-product-list>
+
+
+
+
+
+
+
+
+
+<div class="hide">
   <p>
-    This is our website <b> {{ websitename }} </b>. It is an e-commerce application. You can buy any kind of clothing. Our
-    website
-    <b> {{ websitename }} </b> is designed in Angular 4.
-  </p>
-</div>
-<h1>Event Binding</h1>
+    <b> {{ description }} </b></p>
+  <!-- <div [id]="containerId"  class="container" [ngClass]="clsArr" [class.success]="flag" [class.error]="!flag"> -->
+  <div [id]="containerId" class="container" [ngClass]="clsObj">
+    {{ containerId }}
+    <p>
+      This is our website <b> {{ websitename }} </b>. It is an e-commerce application. You can buy any kind of clothing.
+      Our website
+      <b> {{ websitename }} </b> is designed in Angular 4.
+    </p>
+  </div>
+  <h1>Event Binding</h1>
 
-<div> {{ message }} </div>
-<button (click)="doLogin($event,'Login Success')">Do login</button>
-<button (mouseover)="testEventObject($event)">Test Evebt object</button>
-<button (click)="clickWithCtrl($event)">Test Ctrl Click</button>
+  <div> {{ message }} </div>
+  <button (click)="doLogin($event,'Login Success')">Do login</button>
+  <button (mouseover)="testEventObject($event)">Test Evebt object</button>
+  <button (click)="clickWithCtrl($event)">Test Ctrl Click</button>
 
-<h1>Structural directives</h1>
-<div class="warning" *ngIf="showWarning">You have a warning!</div>
-<div class="info" *ngIf="showWarning===false">Welcome Guest:)</div>
-<button (click)="showWarn()">Show Warning</button>
-<button (click)="showInfo()">Show Info</button>
+  <h1>Structural directives</h1>
+  <div class="warning" *ngIf="showWarning">You have a warning!</div>
+  <div class="info" *ngIf="showWarning===false">Welcome Guest:)</div>
+  <button (click)="showWarn()">Show Warning</button>
+  <button (click)="showInfo()">Show Info</button>
 
-<h2>Ng for</h2>
-<b>Available Colors</b>
-<ul>
-  <li *ngFor="let color of colors">
-    <input type="text" [value]="color" />
-    <span [style.color]="color">{{color}}</span> </li>
-</ul>
-<b>Meta Data</b>
-<!-- <ul>
+  <h2>Ng for</h2>
+  <b>Available Colors</b>
+  <ul>
+    <li *ngFor="let color of colors">
+      <input type="text" [value]="color" />
+      <span [style.color]="color">{{color}}</span> </li>
+  </ul>
+  <b>Meta Data</b>
+  <!-- <ul>
   <ng-template ngFor let-color [ngForOf]="colors" let-i="index" let-odd="odd" let-ev="even">
     <li *ngIf="ev">
       {{i+1}} :: <span [style.color]="color">{{color}}</span> Index:{{i}}
@@ -38,28 +49,29 @@
   </ng-template>
 </ul> -->
 
-<ul>
-  <li *ngFor="let color of colors;let i=index;let od=odd;let ev=even;let fi=first;let la=last;">
-    {{i+1}} :: <span [style.color]="color">{{color}}</span> Index:{{i}}
-    <button (click)="removeColor(i)">Remove</button>
-  </li>
-</ul>
+  <ul>
+    <li *ngFor="let color of colors;let i=index;let od=odd;let ev=even;let fi=first;let la=last;">
+      {{i+1}} :: <span [style.color]="color">{{color}}</span> Index:{{i}}
+      <button (click)="removeColor(i)">Remove</button>
+    </li>
+  </ul>
 
-<ul>
-  <li *ngFor="let co of colors1;let i=index;let od=odd;let ev=even;let fi=first;let la=last;">
-    {{i+1}} :: <span [style.color]="co">{{co}}</span> Index:{{i}}
+  <ul>
+    <li *ngFor="let co of colors1;let i=index;let od=odd;let ev=even;let fi=first;let la=last;">
+      {{i+1}} :: <span [style.color]="co">{{co}}</span> Index:{{i}}
 
-  </li>
-</ul>
+    </li>
+  </ul>
 
-<button (click)="changeState(1)">Success</button>
-<button (click)="changeState(2)">Info</button>
-<button (click)="changeState(3)">Warning</button>
-<button (click)="changeState(0)">Default</button>
+  <button (click)="changeState(1)">Success</button>
+  <button (click)="changeState(2)">Info</button>
+  <button (click)="changeState(3)">Warning</button>
+  <button (click)="changeState(0)">Default</button>
 
-<div [ngSwitch]="state">
-  <div *ngSwitchCase="1" class="successb">Success Messasge </div>
-  <div *ngSwitchCase="2" class="info">Info Messasge </div>
-  <div *ngSwitchCase="3" class="warning">Warning Messasge </div>
-  <div *ngSwitchDefault>Default Messasge </div>
+  <div [ngSwitch]="state">
+    <div *ngSwitchCase="1" class="successb">Success Messasge </div>
+    <div *ngSwitchCase="2" class="info">Info Messasge </div>
+    <div *ngSwitchCase="3" class="warning">Warning Messasge </div>
+    <div *ngSwitchDefault>Default Messasge </div>
+  </div>
 </div>
