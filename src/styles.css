@@ -24,7 +24,7 @@ p {
 }
 
 .footer ul li,.header ul li{
-    display: inline-block;
+    /*display: block;*/
 }
 
 .float-left {
@@ -38,3 +38,10 @@ p {
     clear: both;
 }
 
+
+.container {
+    background: lightgray;
+    padding:3px;
+    margin: 3px;
+    border: 1px solid darkgray;
+}

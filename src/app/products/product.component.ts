@@ -1,11 +1,12 @@
-import { Component, Input, EventEmitter, Output } from "@angular/core";
+import { Component, Input, EventEmitter, Output, OnInit } from "@angular/core";
 
 @Component( {
 selector:"app-product",
 templateUrl:"./product.component.html"
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit {
     
+
     @Input()
     product:any;
     
@@ -21,6 +22,13 @@ export class ProductComponent {
 
 
     constructor() {
+//  console.log("Product constructor");  
+//  console.log("from constructor",this.product);  
+}
+
+    ngOnInit(): void {
+    //  console.log("Product initilized");
+    //  console.log("from ngonInit",this.product); 
     }
 
     onCartBtnClick() {

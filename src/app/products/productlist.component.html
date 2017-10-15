@@ -1,3 +1,12 @@
+<button (click)="changeMessage()">Change Message</button>
+<button (click)="changeDetailsOnly()">Change Details Only</button>
+<button (click)="changeDetails()">Change Details</button>
+<br>
+<app-product-details [product]="productDetails" [msg]="message">
+    <h4>Produt details footer</h4>
+    <p>A blank description about product details</p>
+</app-product-details>
+<hr>
 <div *ngFor="let p of products">
     <app-product [product]="p" msg="Hi" (onCartClick)="addToCart($event)" isproductlist="true"></app-product>
     <hr>
@@ -7,6 +16,10 @@
 <p>Total {{cart.length}} items</p>
 
 <div *ngFor="let c of cart">
-    <app-product [product]="c" msg="Cart Item" isproductlist="true"></app-product>
+    <app-product [product]="c" msg="Cart Item" isproductlist="true">
+    </app-product>
     <hr>
 </div>
+
+<button (click)="toggle()">Switch</button>
+<img [src]="imgpath" width="300" height="200" />

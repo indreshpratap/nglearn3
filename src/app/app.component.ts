@@ -21,6 +21,7 @@ export class AppComponent {
   showWarning = false;
   //Event binding
 
+  showHome = false;
   testds = "fdsf";
 
   colors = ['Red', 'Green', 'Blue'];
@@ -32,7 +33,9 @@ export class AppComponent {
   constructor() {
     this.colors1 = [...this.colors];
   }
-
+  toggleHome() {
+    this.showHome = !this.showHome;
+  }
   doLogin(event, msg) {
     console.log("Event Triggerred! ", event);
     // this.message = "You have logged-In successfully:)";
