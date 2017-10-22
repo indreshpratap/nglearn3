@@ -8,6 +8,7 @@ import { ProductComponent } from "app/products/product.component";
 import { ProductListComponent } from "app/products/productlist.component";
 import { HomeComponent } from "app/home/home.component";
 import { ProductDetailsComponent } from "app/products/productdetail.component";
+import { ProductService } from "app/products/product.service";
 
 
 @NgModule({
@@ -22,8 +23,11 @@ import { ProductDetailsComponent } from "app/products/productdetail.component";
   ],
   imports: [
     BrowserModule
-   ],
+  ],
+  providers: [ProductService],
 
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+ }

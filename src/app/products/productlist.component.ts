@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { ProductService } from "app/products/product.service";
+import { Title } from "@angular/platform-browser";
 
 @Component({
     selector: "app-product-list",
@@ -14,8 +16,9 @@ export class ProductListComponent implements OnInit {
     productDetails;
     message;
 
-    constructor() {
+    constructor(private productService:ProductService,private titleService: Title) {
         // console.log("productlist constructor called!");
+        this.titleService.setTitle("On product listing page");
 
     }
 
@@ -30,22 +33,7 @@ export class ProductListComponent implements OnInit {
             description: "A Blue jeans"
         };
 
-        this.products = [
-            {
-                id: 1,
-                name: "Product 1",
-                price: 999,
-                color: "white",
-                category: "cloth",
-            },
-            {
-                id: 2,
-                name: "Television",
-                price: 9999,
-                color: "Black",
-                category: "electronics",
-            },
-        ];
+        this.products = this.productService.getProductList();
     }
 
     changeMessage() {
